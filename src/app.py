@@ -52,8 +52,8 @@ def encryptFileRoute():
 
 
 if __name__ == "__main__":
-    is_production = os.getenv('FLASK_ENV', 'development')
-    port = os.getenv('PORT', '9000')
+    is_production = os.getenv("FLASK_ENV", "development")
+    port = os.getenv("PORT", "9000")
     if is_production == "production":
         serve(app, host="0.0.0.0", port=port)
     else:

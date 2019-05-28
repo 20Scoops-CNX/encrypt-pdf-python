@@ -22,6 +22,11 @@ Make sure your uesed python3 and clone this repository
     docker-compose up -d --build
     ```
 
+# Code Style 
+This project we used Black
+```
+pip install black
+```
 
 # API
 
