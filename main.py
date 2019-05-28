@@ -1,8 +1,9 @@
+import os
 from PyPDF2 import PdfFileReader, PdfFileWriter
 from flask import Flask, send_from_directory, request, jsonify
-import os
 
-app = Flask(__name__, static_folder='files')
+directory = 'files'
+app = Flask(__name__, static_folder=directory)
 
 def encryptFilePDF(file_name, password):
     pathFile = './files/' + file_name
@@ -33,7 +34,6 @@ def encryptFileRoute():
     if not mimetype in 'application/pdf':
         return jsonify({'error': 'bad-type'})
 
-    directory = 'files'
     if not os.path.exists(directory):
         os.makedirs(directory)
 
