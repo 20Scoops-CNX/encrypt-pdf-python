@@ -1,7 +1,7 @@
 import os
 from waitress import serve
 from PyPDF2 import PdfFileReader, PdfFileWriter
-from flask import Flask, send_from_directory, request, jsonify
+from flask import Flask, send_file, request, jsonify
 
 directory = "files"
 app = Flask(__name__, static_folder=directory)
@@ -48,7 +48,7 @@ def encryptFileRoute():
 
     encryptFilePDF(file_name, password)
 
-    return send_from_directory(directory=directory, filename="encrypted_file.pdf")
+    return send_file("files/" + "encrypted_file.pdf", as_attachment=True)
 
 
 if __name__ == "__main__":
