@@ -4,7 +4,7 @@
 
 API for encrypt file PDF.
 
-![](https://github.com/20Scoops-CNX/encrypt-pdf-python/blob/master/arts/image-1.png?raw=true)
+<img src="https://github.com/20Scoops-CNX/encrypt-pdf-python/blob/master/arts/image-1.png?raw=true" width="100%">
 
 
 # Install
