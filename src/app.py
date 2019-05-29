@@ -48,8 +48,6 @@ def encryptFileRoute():
 
     encryptFilePDF(file_name, password)
 
-    print(os.getcwd() + "/files/encrypted_file.pdf")
-
     return send_file(os.getcwd() + "/files/encrypted_file.pdf", as_attachment=True)
 
 
