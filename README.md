@@ -38,3 +38,10 @@ Method: `POST`
 | :---         |     :---     |
 | file   | File for encrypt (.pdf only) | 
 | password | your key for encrypt file |
+
+# Production
+
+```js
+// add env for production
+FLASK_ENV = production
+```
