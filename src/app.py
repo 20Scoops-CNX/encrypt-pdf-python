@@ -2,10 +2,11 @@ import os
 from waitress import serve
 from PyPDF2 import PdfFileReader, PdfFileWriter
 from flask import Flask, send_file, request, jsonify
+from flask_cors import CORS
 
 directory = "files"
 app = Flask(__name__, static_folder=directory)
-
+CORS(app)
 
 def encryptFilePDF(file_name, password):
     pathFile = "./files/" + file_name
@@ -39,6 +40,8 @@ def encryptFileRoute():
 
     if not os.path.exists(directory):
         os.makedirs(directory)
+
+    print(os.path);
 
     pdf_file.save(os.path.join(directory, file_name))
 
