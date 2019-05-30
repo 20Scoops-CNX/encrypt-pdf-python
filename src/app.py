@@ -41,8 +41,6 @@ def encryptFileRoute():
     if not os.path.exists(directory):
         os.makedirs(directory)
 
-    print(os.path);
-
     pdf_file.save(os.path.join(directory, file_name))
 
     if not "password" in request.form:
