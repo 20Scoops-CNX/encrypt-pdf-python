@@ -45,3 +45,7 @@ Method: `POST`
 // add env for production
 FLASK_ENV = production
 ```
+
+# Recommend
+
+If your PDF file size > 1MB. you must compress file before call API encrypt for reduces size and response time 😎 
